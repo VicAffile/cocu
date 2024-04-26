@@ -1,4 +1,4 @@
-# Contrôleur d'Objets Connectés Utilisés
+# Contrôleur d'Objets Connectés Utilisés (C.O.C.U.)
 
 ## Description
 Ceci est un projet en C# WPF utilisant SQLite et ManagedWifi.
