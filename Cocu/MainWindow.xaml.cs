@@ -9,16 +9,33 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Cocu.Data;
+using Cocu.Repositories;
+using Cocu.Services;
+
 namespace Cocu
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
+            NavigateService.Initialize(MainContent);
+
+            AppDbContext appDbContext = new();
+            UserRepository userRepository = new(appDbContext);
+            AuthenticationService authenticationService = new(userRepository);
+
+            bool isAccountExist = authenticationService.AccountExist();
+            if (isAccountExist)
+            {
+                NavigateService.NavigateToConnectionPage();
+            }
+            else
+            {
+                NavigateService.NavigateToRegisterPage();
+            }
         }
     }
 }
