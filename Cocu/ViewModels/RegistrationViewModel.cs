@@ -80,7 +80,7 @@ namespace Cocu.ViewModels
                 bool result = _authenticationService.Register(_email, _password);
                 if (result)
                 {
-                    MessageBox.Show("Inscription réussi");
+                    NavigateService.NavigateToWifiObjectListPage();
                 }
                 else
                 {
