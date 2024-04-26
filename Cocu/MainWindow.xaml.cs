@@ -20,6 +20,7 @@ namespace Cocu
             InitializeComponent();
             this.WindowState = WindowState.Maximized;
             NavigateService.Initialize(MainContent);
+            NavigateService.NavigateToRegisterPage();
         }
     }
 }
