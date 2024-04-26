@@ -22,8 +22,6 @@ namespace Cocu
             InitializeComponent();
             this.WindowState = WindowState.Maximized;
             NavigateService.Initialize(MainContent);
-<<<<<<< Updated upstream
-=======
 
             AppDbContext appDbContext = new();
             UserRepository userRepository = new(appDbContext);
@@ -38,7 +36,6 @@ namespace Cocu
             {
                 NavigateService.NavigateToRegisterPage();
             }
->>>>>>> Stashed changes
         }
     }
 }
