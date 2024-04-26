@@ -22,4 +22,4 @@ Install-Package ManagedWifi
 4. Suivez les instructions à l'écran pour interagir avec l'application.
 
 ## Contributeurs
-- [Victor Affilé]
+- Victor Affilé
