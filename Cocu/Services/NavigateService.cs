@@ -62,5 +62,18 @@ namespace Cocu.Services
 
             NavigateTo(connectionView);
         }
+
+        public static void NavigateToWifiObjectListPage()
+        {
+            WifiScannerService wifiScannerService = new();
+            WifiObjectListViewModel wifiObjectListViewModel = new(wifiScannerService);
+
+            WifiObjectListView wifiObjectListView = new WifiObjectListView()
+            {
+                DataContext = wifiObjectListViewModel
+            };
+
+            NavigateTo(wifiObjectListView);
+        }
     }
 }

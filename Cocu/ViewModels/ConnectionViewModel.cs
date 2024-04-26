@@ -43,7 +43,7 @@ namespace Cocu.ViewModels
             bool isAuthenticate = _authenticationService.Authenticate(_password);
             if (isAuthenticate)
             {
-                MessageBox.Show("Le mot de passe est bon");
+                NavigateService.NavigateToWifiObjectListPage();
             }
             else
             {
