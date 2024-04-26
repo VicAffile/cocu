@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-using WpfApp2.Data;
+using Cocu.Data;
 
 namespace Cocu
 {
