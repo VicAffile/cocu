@@ -48,5 +48,19 @@ namespace Cocu.Services
 
             NavigateTo(registrationView);
         }
+
+        public static void NavigateToConnectionPage()
+        {
+            UserRepository userRepository = new(_appDbContext);
+            AuthenticationService authenticationService = new(userRepository);
+            ConnectionViewModel connectionViewModel = new(authenticationService);
+
+            ConnectionView connectionView = new()
+            {
+                DataContext = connectionViewModel
+            };
+
+            NavigateTo(connectionView);
+        }
     }
 }
